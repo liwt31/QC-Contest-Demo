@@ -1,18 +1,11 @@
-# Python example code for the ACM/IEEE Quantum Computing for Drug Discovery Challenge at ICCAD 2023
+# Solution by Tencent Quantum Lab
 
-## What's in this repository?
+The solution is in `get_energy.ipynb`.
 
-This repository contains a simple example to illustrate how to train the variational quantum eigensolver on the Qiskit platform and evaluate the comprehensive performances in terms of accuracy, quantum resource cost, and classical computation resource cost.
+Two circuits are used for this task, generated from `get_energy.ipynb` in qasm format. All three noise models share the same set of circuits. `circuit.txt` is the circuit for energy evaluation. `circuit_em.txt` is the circuit for error mitigation.
 
-For this example, we implemented a UCCSD ansatz with a Hartree-fork initial state. You can use different techniques to construct the ansatz and find the initial state for your implementation. We required all participants to read the [Example_Code](https://github.com/qccontest/QC-Contest-Demo/blob/main/examplecode.ipynb), as we describe details in the .ipynb file, with examples of implementation, how to calculate the accuracy, and how to obtain the circuit duration. 
+To install dependencies for the notebook, simply run `pip install -r requirements.txt`. Note `qiskit` must be the newest version.
 
-And we release the noise model and system model, we require participant to follow the topology map from FakeMontreal. And we provide three noise models extracted from FakeCairo, FakeMontreal, and FakeKolkata. Please refer to the [NoiseModel and SystemModel](https://github.com/qccontest/QC-Contest-Demo/blob/main/NoiseModel_and_SystemModel.ipynb).
+Or directly run the notebook in binder:
 
-
-## How do I find the dataset?
-
-You can find the Hamiltonian for the target molecule at [Hamiltonian](https://github.com/qccontest/QC-Contest-Demo/tree/main/Hamiltonian). And we also recommend participants some seeds for algorithmic, transpiling, and measurement in Qiskit; the final results should be the average of 10 different seeds: 5 in [Seeds](https://github.com/qccontest/QC-Contest-Demo/blob/main/algorithm_seeds/requiredseeds.txt), and other 5 will be selected from hidden test seeds set. You can find the noise models at [NoiseModel](https://github.com/qccontest/QC-Contest-Demo/tree/main/NoiseModel).
-
-## Convert given Hamiltonian to compatible with pennylane:
-
-You can find the example code to convert the given Hamiltonian to compatible with pennylane at [converter](https://github.com/qccontest/QC-Contest-Demo/blob/main/Hamiltonian_to_pennylane.py).
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/liwt31/QC-Contest-Demo/HEAD)

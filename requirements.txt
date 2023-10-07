@@ -1,0 +1,2 @@
+tencirchem
+qiskit_aer
